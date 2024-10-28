@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2115 - kontakt</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <img src="21i15.png" alt="Logo Strony" style="width: 500px; height: 500px;">
+        <div class="header-buttons">
+            <a href="index.html" class="button">Start</a>
+            <a href="projekty.html" class="button">Projekty</a>
+            <a href="kontakt.html" class="button">Kontakt</a>
+        </div>
+    </header>
+    <section id="contact-section">
+        <h2>Kontakt</h2>
+        <p>Masz pytania? Skontaktuj się z nami!</p>
+        <ul>
+            <li><strong>Adres e-mail:</strong> <a href="mailto:kontakt@2115.pl">kontakt@2115.pl</a></li>
+            <li><strong>Telefon:</strong> <a href="tel:+48123456789">+48 123 456 789</a></li>
+            <li><strong>Adres:</strong> ul. Przykładowa 15, 00-000 Warszawa, Polska</li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 By Miszel</p>
+        <p>Data: <span id="currentDate"></span></p>
+        <script>
+            function aktualizujDate() {
+                const currentDateElement = document.getElementById("currentDate");
+                const aktualnaData = new Date();
+                currentDateElement.textContent = aktualnaData.toLocaleDateString() + " " + aktualnaData.toLocaleTimeString();
+            }
+
+            aktualizujDate();
+
+            setInterval(aktualizujDate, 1000);
+        </script>
+    </footer>
+</body>
+</html>
